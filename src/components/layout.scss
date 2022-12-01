@@ -1,0 +1,130 @@
+header {
+  width: 100%;
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 8px 16px;
+
+    .layoutLogo {
+      align-self: center;
+      justify-self: flex-start;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 12px;
+      a {
+        padding: 12px 10px;
+        font-weight: 700;
+        color: #333333;
+        background-color: #ffffff;
+        border-radius: 12px;
+        &:hover,
+        &.active {
+          background-color: var(--green);
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.character {
+  .tableContainer {
+    table {
+      margin: 0 auto;
+      display: table;
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-color: grey;
+
+      thead {
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+      }
+      tbody {
+        border: 1px solid #ccc;
+        tr {
+          border-bottom: 1px solid #ccc;
+          td {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.episodes,
+.episode {
+  text-align: left;
+  padding: 32px;
+}
+
+.character {
+  article {
+    text-align: left;
+    padding: 5px 16px;
+  }
+}
+
+h2 {
+  font-size: 3.75rem;
+  font-family: Roboto Mono, monospace;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 2.5rem;
+  font-family: Roboto Mono, monospace;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-family: Roboto Mono, monospace;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  margin: 0;
+}
+
+button.pagination {
+  padding: 12px 10px;
+  font-weight: 700;
+  color: #333333;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-right: 12px;
+  &:hover,
+  &.active {
+    background-color: var(--green);
+    color: #333;
+  }
+}
