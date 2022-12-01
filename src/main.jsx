@@ -20,65 +20,75 @@ import Episode from "./components/episode";
 import EpisodesQuery from "./components/episodesQuery";
 import EpisodeQuery from "./components/episodeQuery";
 
-const routerQuery = createBrowserRouter([
+const routerQuery = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <App />,
+        },
+        {
+          path: "/episodes",
+          element: <EpisodesQuery />,
+        },
+        {
+          path: "/episodes/:episodeId",
+          element: <EpisodeQuery />,
+        },
+        {
+          path: "/characters",
+          element: <CharactersQuery />,
+        },
+        {
+          path: "/characters/:characterId",
+          element: <CharacterQuery />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <App />,
-      },
-      {
-        path: "/episodes",
-        element: <EpisodesQuery />,
-      },
-      {
-        path: "/episodes/:episodeId",
-        element: <EpisodeQuery />,
-      },
-      {
-        path: "/characters",
-        element: <CharactersQuery />,
-      },
-      {
-        path: "/characters/:characterId",
-        element: <CharacterQuery />,
-      },
-    ],
-  },
-]);
+    basename: "/react-query",
+  }
+);
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <App />,
+        },
+        {
+          path: "/episodes",
+          element: <Episodes />,
+        },
+        {
+          path: "/episodes/:episodeId",
+          element: <Episode />,
+        },
+        {
+          path: "/characters",
+          element: <Characters />,
+        },
+        {
+          path: "/characters/:characterId",
+          element: <Character />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <App />,
-      },
-      {
-        path: "/episodes",
-        element: <Episodes />,
-      },
-      {
-        path: "/episodes/:episodeId",
-        element: <Episode />,
-      },
-      {
-        path: "/characters",
-        element: <Characters />,
-      },
-      {
-        path: "/characters/:characterId",
-        element: <Character />,
-      },
-    ],
-  },
-]);
+    basename: "/react-query",
+  }
+);
 
 // Create a client
 const queryClient = new QueryClient();
