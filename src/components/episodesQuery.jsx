@@ -7,7 +7,7 @@ import { getEpisodesQuery } from "../queries/queries";
 const EpisodesQuery = () => {
   const [page, setPage] = useState(1);
 
-  const { isLoading, data, isFetching, isPreviousData } = useQuery({
+  const { isLoading, data, isFetching } = useQuery({
     queryKey: ["episodes", page],
     queryFn: () => getEpisodesQuery(page),
     keepPreviousData: true,
